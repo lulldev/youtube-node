@@ -1,9 +1,8 @@
 var YouTube = require('../lib/youtube');
 var config = require('./config');
 
-var youTube = new YouTube();
+var youTube = new YouTube(config.key);
 
-youTube.setKey(config.key);
 youTube.getById('HcwTxRuq-uk,vIu85WQTPRc', function(error, result) {
   if (error) {
     console.log(error);
