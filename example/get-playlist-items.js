@@ -1,9 +1,8 @@
 var YouTube = require('../lib/youtube');
 var config = require('./config');
 
-var youTube = new YouTube();
+var youTube = new YouTube(config.key);
 
-youTube.setKey(config.key);
 youTube.getPlayListsItemsById('PLpOqH6AE0tNhInmRTSNf9f6OQsdaSJS8F', function(error, result) {
   if (error) {
     console.log(error);

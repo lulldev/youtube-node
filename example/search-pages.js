@@ -1,8 +1,7 @@
 var YouTube = require('../lib/youtube');
 var config = require('./config');
-var youTube = new YouTube();
+var youTube = new YouTube(config.key);
 
-youTube.setKey(config.key);
 
 var query = 'World War z Trailer';
 
